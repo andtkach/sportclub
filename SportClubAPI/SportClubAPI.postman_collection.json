@@ -95,12 +95,12 @@
 					"response": []
 				},
 				{
-					"name": "Get category",
+					"name": "Get sport",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://localhost:44330/api/sport/52650028-ce5a-4a6f-afda-ecb24653b1e9",
+							"raw": "https://localhost:44330/api/sport/4acfb92f-7c21-47de-8a4e-32f476e9bcfc",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -109,7 +109,7 @@
 							"path": [
 								"api",
 								"sport",
-								"52650028-ce5a-4a6f-afda-ecb24653b1e9"
+								"4acfb92f-7c21-47de-8a4e-32f476e9bcfc"
 							]
 						}
 					},
@@ -144,7 +144,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwianRpIjoiODc2ZDg0NTItYzMwMy00N2E0LThkYTAtOTY5NTVlNDA2MmJjIiwiZW1haWwiOiJqb2huLmRvZUBlbWFpbC5jb20iLCJ1aWQiOiI2MmExNGUzYy1lZGFkLTQ5YTktOWNhYy00ZjkxZWUyZGMzNzAiLCJleHAiOjE2MTU4MjY4ODAsImlzcyI6IkFwcElkZW50aXR5IiwiYXVkIjoiQXBwSWRlbnRpdHlVc2VyIn0.mnz3BFoU87WvlhZLjs4HFICrS-S8wL4D2ZV71MfcdoI",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwianRpIjoiMzhjZjAwZTctYjYyZC00ZmIyLTllMjAtYWE0NDNjMzEzNTUyIiwiZW1haWwiOiJqb2huLmRvZUBlbWFpbC5jb20iLCJ1aWQiOiI2MmExNGUzYy1lZGFkLTQ5YTktOWNhYy00ZjkxZWUyZGMzNzAiLCJleHAiOjE2MTU4MzIyNTEsImlzcyI6IkFwcElkZW50aXR5IiwiYXVkIjoiQXBwSWRlbnRpdHlVc2VyIn0.7toHKFGoo8j0N_0QDCIL4DLhdcSkESuVaWEEFWa_xhc",
 									"type": "string"
 								}
 							]

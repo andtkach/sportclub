@@ -11,7 +11,6 @@ using Application.Features.Sports.Commands.UpdateSport;
 using Application.Features.Sports.Queries.GetSportDetail;
 using Application.Features.Sports.Queries.GetSportsList;
 using Application.Features.Sports.Queries.GetSportsListWithItems;
-using Microsoft.AspNetCore.Cors;
 
 namespace Api.Controllers
 {

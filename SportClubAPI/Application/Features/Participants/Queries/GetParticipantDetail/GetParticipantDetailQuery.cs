@@ -1,7 +1,7 @@
-﻿using MediatR;
-using System;
+﻿using System;
+using MediatR;
 
-namespace Application.Features.Items.Queries.GetItemDetail
+namespace Application.Features.Participants.Queries.GetParticipantDetail
 {
     public class GetParticipantDetailQuery: IRequest<ParticipantDetailVm>
     {

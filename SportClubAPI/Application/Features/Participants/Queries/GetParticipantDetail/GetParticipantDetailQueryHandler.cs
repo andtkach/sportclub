@@ -1,12 +1,12 @@
-﻿using AutoMapper;
+﻿using System.Threading;
+using System.Threading.Tasks;
 using Application.Contracts.Persistence;
 using Application.Exceptions;
+using AutoMapper;
 using Domain.Entities;
 using MediatR;
-using System.Threading;
-using System.Threading.Tasks;
 
-namespace Application.Features.Items.Queries.GetItemDetail
+namespace Application.Features.Participants.Queries.GetParticipantDetail
 {
     public class GetParticipantDetailQueryHandler : IRequestHandler<GetParticipantDetailQuery, ParticipantDetailVm>
     {

@@ -1,7 +1,4 @@
-﻿using Api.Utility;
-using Application.Features.Items.Queries.GetItemDetail;
-using Application.Features.Items.Queries.GetItemsList;
-using MediatR;
+﻿using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -10,6 +7,7 @@ using System.Threading.Tasks;
 using Application.Features.Participants.Commands.CreateParticipant;
 using Application.Features.Participants.Commands.DeleteParticipant;
 using Application.Features.Participants.Commands.UpdateParticipant;
+using Application.Features.Participants.Queries.GetParticipantDetail;
 using Application.Features.Participants.Queries.GetParticipantList;
 using Application.Features.Participants.Queries.GetParticipantSportsList;
 using Microsoft.AspNetCore.Authorization;

@@ -1,8 +1,7 @@
-﻿using MediatR;
-using System.Collections.Generic;
-using Application.Features.Participants.Queries.GetParticipantList;
+﻿using System.Collections.Generic;
+using MediatR;
 
-namespace Application.Features.Items.Queries.GetItemsList
+namespace Application.Features.Participants.Queries.GetParticipantList
 {
     public class GetParticipantsListQuery: IRequest<List<ParticipantListVm>>
     {

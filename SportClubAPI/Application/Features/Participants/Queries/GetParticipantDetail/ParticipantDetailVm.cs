@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Application.Features.Items.Queries.GetItemDetail
+namespace Application.Features.Participants.Queries.GetParticipantDetail
 {
     public class ParticipantDetailVm
     {

@@ -1,14 +1,12 @@
-﻿using AutoMapper;
-using Application.Contracts.Persistence;
-using Domain.Entities;
-using MediatR;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using Application.Features.Participants.Queries.GetParticipantList;
+using Application.Contracts.Persistence;
+using AutoMapper;
+using Domain.Entities;
+using MediatR;
 
-namespace Application.Features.Items.Queries.GetItemsList
+namespace Application.Features.Participants.Queries.GetParticipantList
 {
     public class GetParticipantsListQueryHandler : IRequestHandler<GetParticipantsListQuery, List<ParticipantListVm>>
     {

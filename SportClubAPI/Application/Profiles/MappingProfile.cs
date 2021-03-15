@@ -1,8 +1,7 @@
 ﻿using AutoMapper;
-using Application.Features.Items.Queries.GetItemDetail;
-using Application.Features.Items.Queries.GetItemsList;
 using Application.Features.Participants.Commands.CreateParticipant;
 using Application.Features.Participants.Commands.UpdateParticipant;
+using Application.Features.Participants.Queries.GetParticipantDetail;
 using Application.Features.Participants.Queries.GetParticipantList;
 using Application.Features.Participants.Queries.GetParticipantSportsList;
 using Application.Features.Sports.Commands.CreateSport;
