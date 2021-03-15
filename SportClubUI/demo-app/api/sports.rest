@@ -4,6 +4,9 @@ GET https://localhost:44330/api/sport/all HTTP/1.1
 
 ###
 
+GET https://localhost:44330/api/sport/allwithitems HTTP/1.1
+
+###
 GET https://localhost:44330/api/sport/15ca1813-2dd1-47c6-8ce7-48857008bd5f HTTP/1.1
 
 ###

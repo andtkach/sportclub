@@ -1,0 +1,11 @@
+
+
+GET https://localhost:44330/api/participants HTTP/1.1
+
+###
+
+GET https://localhost:44330/api/participants/johndoe@email.com/sports HTTP/1.1
+
+###
+GET https://localhost:44330/api/participants/cc525709-4843-4964-9b7f-4c36cb565fa0 HTTP/1.1
+

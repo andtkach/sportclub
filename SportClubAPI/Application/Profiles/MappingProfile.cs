@@ -6,6 +6,7 @@ using Application.Features.Categories.Queries.GetCategoriesListWithItems;
 using Application.Features.Categories.Queries.GetCategoryDetail;
 using Application.Features.Items.Commands.CreateItem;
 using Application.Features.Items.Commands.UpdateItem;
+using Application.Features.Items.Queries.GetIParticipanSportsList;
 using Application.Features.Items.Queries.GetItemDetail;
 using Application.Features.Items.Queries.GetItemsList;
 using Domain.Entities;
@@ -21,6 +22,7 @@ namespace Application.Profiles
             CreateMap<Participant, UpdateParticipantCommand>().ReverseMap();
             CreateMap<Participant, ParticipantDetailVm>().ReverseMap();
             CreateMap<Participant, SportParticipantDto>().ReverseMap();
+            CreateMap<Participant, ParticipantSportsListVm>().ReverseMap();
 
             CreateMap<Sport, SportDto>();
             CreateMap<Sport, SportListVm>();

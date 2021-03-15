@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Application.Features.Items.Queries.GetIParticipanSportsList;
 using Microsoft.AspNetCore.Authorization;
 
 namespace Api.Controllers
@@ -31,6 +32,15 @@ namespace Api.Controllers
         public async Task<ActionResult<List<ParticipantListVm>>> GetAllParticipants()
         {
             var dtos = await _mediator.Send(new GetParticipantsListQuery());
+            return Ok(dtos);
+        }
+
+        [HttpGet("{email}/sports", Name = "GetParticipantSports")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesDefaultResponseType]
+        public async Task<ActionResult<List<ParticipantSportsListVm>>> GetParticipantSports(string email)
+        {
+            var dtos = await _mediator.Send(new GetParticipantSportsListQuery() { Email = email });
             return Ok(dtos);
         }
 
