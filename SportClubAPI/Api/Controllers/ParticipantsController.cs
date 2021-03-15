@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using Application.Features.Participants.Commands.CreateParticipant;
 using Application.Features.Participants.Commands.DeleteParticipant;
 using Application.Features.Participants.Commands.UpdateParticipant;
+using Application.Features.Participants.Queries.GetParticipantList;
 using Application.Features.Participants.Queries.GetParticipantSportsList;
 using Microsoft.AspNetCore.Authorization;
 

@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "8308832c-7073-49a7-818f-10bbf23d091d",
-		"name": "Demo API",
+		"_postman_id": "7419f66f-baaa-4ff4-a86b-104d74236a20",
+		"name": "SportClubAPI",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -15,7 +15,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"email\": \"user1@email.com\",\r\n  \"password\": \"P@assw0rd1\"\r\n}",
+							"raw": "{\r\n  \"email\": \"john.doe@email.com\",\r\n  \"password\": \"P@assw0rd1\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -71,15 +71,15 @@
 			]
 		},
 		{
-			"name": "Category",
+			"name": "Sport",
 			"item": [
 				{
-					"name": "Get all categories",
+					"name": "Get all sports",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://localhost:44330/api/Category/all",
+							"raw": "https://localhost:44330/api/sport/all",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -87,7 +87,7 @@
 							"port": "44330",
 							"path": [
 								"api",
-								"Category",
+								"sport",
 								"all"
 							]
 						}
@@ -100,7 +100,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://localhost:44330/api/Category/a3b816f8-3dc7-4b80-9c56-74c3d9f75b0f",
+							"raw": "https://localhost:44330/api/sport/52650028-ce5a-4a6f-afda-ecb24653b1e9",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -108,20 +108,20 @@
 							"port": "44330",
 							"path": [
 								"api",
-								"Category",
-								"a3b816f8-3dc7-4b80-9c56-74c3d9f75b0f"
+								"sport",
+								"52650028-ce5a-4a6f-afda-ecb24653b1e9"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Get all categories with items",
+					"name": "Get all sports with participants",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://localhost:44330/api/Category/allwithitems",
+							"raw": "https://localhost:44330/api/sport/allwithitems",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -129,7 +129,7 @@
 							"port": "44330",
 							"path": [
 								"api",
-								"Category",
+								"sport",
 								"allwithitems"
 							]
 						}
@@ -137,14 +137,14 @@
 					"response": []
 				},
 				{
-					"name": "Create category",
+					"name": "Create sport",
 					"request": {
 						"auth": {
 							"type": "bearer",
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzb21lLXVzZXItMSIsImp0aSI6ImRiNTYyZDNlLTBiMDYtNDM0OC05NGI5LTgyMmUzMDYwNjI0YiIsImVtYWlsIjoidXNlcjFAZW1haWwuY29tIiwidWlkIjoiZjNkZDk1MDAtMTYzZS00YTI5LWJmMWItMjI2NTQwZjk3MjJjIiwiZXhwIjoxNjE1NDcxNTE1LCJpc3MiOiJBcHBJZGVudGl0eSIsImF1ZCI6IkFwcElkZW50aXR5VXNlciJ9.7voavZVrFCczg5WwxNT9DWeovbE0t_85hk3U1up5Jsg",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwianRpIjoiODc2ZDg0NTItYzMwMy00N2E0LThkYTAtOTY5NTVlNDA2MmJjIiwiZW1haWwiOiJqb2huLmRvZUBlbWFpbC5jb20iLCJ1aWQiOiI2MmExNGUzYy1lZGFkLTQ5YTktOWNhYy00ZjkxZWUyZGMzNzAiLCJleHAiOjE2MTU4MjY4ODAsImlzcyI6IkFwcElkZW50aXR5IiwiYXVkIjoiQXBwSWRlbnRpdHlVc2VyIn0.mnz3BFoU87WvlhZLjs4HFICrS-S8wL4D2ZV71MfcdoI",
 									"type": "string"
 								}
 							]
@@ -153,7 +153,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"name\": \"new category\"\r\n}",
+							"raw": "{\r\n  \"name\": \"Football\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -161,7 +161,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://localhost:44330/api/Category",
+							"raw": "https://localhost:44330/api/sport",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -169,21 +169,21 @@
 							"port": "44330",
 							"path": [
 								"api",
-								"Category"
+								"sport"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Update category",
+					"name": "Update sport",
 					"request": {
 						"auth": {
 							"type": "bearer",
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzb21lLXVzZXItMSIsImp0aSI6ImRiNTYyZDNlLTBiMDYtNDM0OC05NGI5LTgyMmUzMDYwNjI0YiIsImVtYWlsIjoidXNlcjFAZW1haWwuY29tIiwidWlkIjoiZjNkZDk1MDAtMTYzZS00YTI5LWJmMWItMjI2NTQwZjk3MjJjIiwiZXhwIjoxNjE1NDcxNTE1LCJpc3MiOiJBcHBJZGVudGl0eSIsImF1ZCI6IkFwcElkZW50aXR5VXNlciJ9.7voavZVrFCczg5WwxNT9DWeovbE0t_85hk3U1up5Jsg",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwianRpIjoiODc2ZDg0NTItYzMwMy00N2E0LThkYTAtOTY5NTVlNDA2MmJjIiwiZW1haWwiOiJqb2huLmRvZUBlbWFpbC5jb20iLCJ1aWQiOiI2MmExNGUzYy1lZGFkLTQ5YTktOWNhYy00ZjkxZWUyZGMzNzAiLCJleHAiOjE2MTU4MjY4ODAsImlzcyI6IkFwcElkZW50aXR5IiwiYXVkIjoiQXBwSWRlbnRpdHlVc2VyIn0.mnz3BFoU87WvlhZLjs4HFICrS-S8wL4D2ZV71MfcdoI",
 									"type": "string"
 								}
 							]
@@ -192,7 +192,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"categoryId\": \"b7229cbe-bf48-4fbd-4517-08d8e48f1a17\",\r\n  \"name\": \"updated\"\r\n}",
+							"raw": "{\r\n  \"id\": \"0d55d640-1b47-4ee5-2c58-08d8e7ca0928\",\r\n  \"name\": \"Foofball 1\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -200,7 +200,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://localhost:44330/api/Category",
+							"raw": "https://localhost:44330/api/sport",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -208,21 +208,21 @@
 							"port": "44330",
 							"path": [
 								"api",
-								"Category"
+								"sport"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Delete category",
+					"name": "Delete sport",
 					"request": {
 						"auth": {
 							"type": "bearer",
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzb21lLXVzZXItMSIsImp0aSI6ImRiNTYyZDNlLTBiMDYtNDM0OC05NGI5LTgyMmUzMDYwNjI0YiIsImVtYWlsIjoidXNlcjFAZW1haWwuY29tIiwidWlkIjoiZjNkZDk1MDAtMTYzZS00YTI5LWJmMWItMjI2NTQwZjk3MjJjIiwiZXhwIjoxNjE1NDcxNTE1LCJpc3MiOiJBcHBJZGVudGl0eSIsImF1ZCI6IkFwcElkZW50aXR5VXNlciJ9.7voavZVrFCczg5WwxNT9DWeovbE0t_85hk3U1up5Jsg",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwianRpIjoiODc2ZDg0NTItYzMwMy00N2E0LThkYTAtOTY5NTVlNDA2MmJjIiwiZW1haWwiOiJqb2huLmRvZUBlbWFpbC5jb20iLCJ1aWQiOiI2MmExNGUzYy1lZGFkLTQ5YTktOWNhYy00ZjkxZWUyZGMzNzAiLCJleHAiOjE2MTU4MjY4ODAsImlzcyI6IkFwcElkZW50aXR5IiwiYXVkIjoiQXBwSWRlbnRpdHlVc2VyIn0.mnz3BFoU87WvlhZLjs4HFICrS-S8wL4D2ZV71MfcdoI",
 									"type": "string"
 								}
 							]
@@ -230,7 +230,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "https://localhost:44330/api/Category/b7229cbe-bf48-4fbd-4517-08d8e48f1a17",
+							"raw": "https://localhost:44330/api/sport/0d55d640-1b47-4ee5-2c58-08d8e7ca0928",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -238,8 +238,8 @@
 							"port": "44330",
 							"path": [
 								"api",
-								"Category",
-								"b7229cbe-bf48-4fbd-4517-08d8e48f1a17"
+								"sport",
+								"0d55d640-1b47-4ee5-2c58-08d8e7ca0928"
 							]
 						}
 					},
@@ -248,15 +248,15 @@
 			]
 		},
 		{
-			"name": "Item",
+			"name": "Participant",
 			"item": [
 				{
-					"name": "Get all items",
+					"name": "Get all participants",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://localhost:44330/api/items",
+							"raw": "https://localhost:44330/api/participants",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -264,19 +264,19 @@
 							"port": "44330",
 							"path": [
 								"api",
-								"items"
+								"participants"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Get item",
+					"name": "Get app sports for participant",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://localhost:44330/api/Items/821e5e63-e48d-431f-85c4-7c2420c53e2f",
+							"raw": "https://localhost:44330/api/participants/johndoe@email.com/sports",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -284,22 +284,44 @@
 							"port": "44330",
 							"path": [
 								"api",
-								"Items",
-								"821e5e63-e48d-431f-85c4-7c2420c53e2f"
+								"participants",
+								"johndoe@email.com",
+								"sports"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Create item",
+					"name": "Get participant",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44330/api/participants/b5900a21-7fb6-4d13-81a3-54a5b8b9f301",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44330",
+							"path": [
+								"api",
+								"participants",
+								"b5900a21-7fb6-4d13-81a3-54a5b8b9f301"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create participant",
 					"request": {
 						"auth": {
 							"type": "bearer",
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzb21lLXVzZXItMSIsImp0aSI6Ijg4ZWFlZmIwLTA4NjgtNGQxYi05OWUyLTNiMWNmOTIzZmRjOSIsImVtYWlsIjoidXNlcjFAZW1haWwuY29tIiwidWlkIjoiZjNkZDk1MDAtMTYzZS00YTI5LWJmMWItMjI2NTQwZjk3MjJjIiwiZXhwIjoxNjE1NDc2MDAwLCJpc3MiOiJBcHBJZGVudGl0eSIsImF1ZCI6IkFwcElkZW50aXR5VXNlciJ9.kLZIbR2XkQZoWQ_nq2eBm7564PEKrHQAx1qI6FIEZcc",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwianRpIjoiODc2ZDg0NTItYzMwMy00N2E0LThkYTAtOTY5NTVlNDA2MmJjIiwiZW1haWwiOiJqb2huLmRvZUBlbWFpbC5jb20iLCJ1aWQiOiI2MmExNGUzYy1lZGFkLTQ5YTktOWNhYy00ZjkxZWUyZGMzNzAiLCJleHAiOjE2MTU4MjY4ODAsImlzcyI6IkFwcElkZW50aXR5IiwiYXVkIjoiQXBwSWRlbnRpdHlVc2VyIn0.mnz3BFoU87WvlhZLjs4HFICrS-S8wL4D2ZV71MfcdoI",
 									"type": "string"
 								}
 							]
@@ -308,7 +330,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"name\": \"rrrrr\",\r\n  \"number\": 1,\r\n  \"date\": \"2022-03-11T13:18:04.734Z\",\r\n  \"description\": \"rrrrr\",\r\n  \"categoryId\": \"72a32bef-209a-471f-bb9c-08d8e48bde4b\"\r\n}",
+							"raw": "{\r\n    \"participantEmail\" : \"some3@email.com\",\r\n  \"sportId\": \"52650028-ce5a-4a6f-afda-ecb24653b1e9\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -316,7 +338,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://localhost:44330/api/Items",
+							"raw": "https://localhost:44330/api/participants",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -324,21 +346,21 @@
 							"port": "44330",
 							"path": [
 								"api",
-								"Items"
+								"participants"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Update item",
+					"name": "Update participant",
 					"request": {
 						"auth": {
 							"type": "bearer",
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzb21lLXVzZXItMSIsImp0aSI6ImRiNTYyZDNlLTBiMDYtNDM0OC05NGI5LTgyMmUzMDYwNjI0YiIsImVtYWlsIjoidXNlcjFAZW1haWwuY29tIiwidWlkIjoiZjNkZDk1MDAtMTYzZS00YTI5LWJmMWItMjI2NTQwZjk3MjJjIiwiZXhwIjoxNjE1NDcxNTE1LCJpc3MiOiJBcHBJZGVudGl0eSIsImF1ZCI6IkFwcElkZW50aXR5VXNlciJ9.7voavZVrFCczg5WwxNT9DWeovbE0t_85hk3U1up5Jsg",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwianRpIjoiODc2ZDg0NTItYzMwMy00N2E0LThkYTAtOTY5NTVlNDA2MmJjIiwiZW1haWwiOiJqb2huLmRvZUBlbWFpbC5jb20iLCJ1aWQiOiI2MmExNGUzYy1lZGFkLTQ5YTktOWNhYy00ZjkxZWUyZGMzNzAiLCJleHAiOjE2MTU4MjY4ODAsImlzcyI6IkFwcElkZW50aXR5IiwiYXVkIjoiQXBwSWRlbnRpdHlVc2VyIn0.mnz3BFoU87WvlhZLjs4HFICrS-S8wL4D2ZV71MfcdoI",
 									"type": "string"
 								}
 							]
@@ -347,7 +369,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"itemId\": \"821e5e63-e48d-431f-85c4-7c2420c53e2f\",\r\n  \"name\": \"string\",\r\n  \"number\": 0,\r\n  \"date\": \"2022-03-11T14:21:20.853Z\",\r\n  \"description\": \"string\",\r\n  \"categoryId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\"\r\n}",
+							"raw": "{\r\n  \"id\": \"143d6828-ddae-4f58-407d-08d8e7cad614\",\r\n  \"participantEmail\": \"updated.email32email.com\",\r\n  \"sportId\": \"52650028-ce5a-4a6f-afda-ecb24653b1e9\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -355,7 +377,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://localhost:44330/api/Item",
+							"raw": "https://localhost:44330/api/participants",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -363,21 +385,21 @@
 							"port": "44330",
 							"path": [
 								"api",
-								"Item"
+								"participants"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Delete item",
+					"name": "Delete Participant",
 					"request": {
 						"auth": {
 							"type": "bearer",
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzb21lLXVzZXItMSIsImp0aSI6ImRiNTYyZDNlLTBiMDYtNDM0OC05NGI5LTgyMmUzMDYwNjI0YiIsImVtYWlsIjoidXNlcjFAZW1haWwuY29tIiwidWlkIjoiZjNkZDk1MDAtMTYzZS00YTI5LWJmMWItMjI2NTQwZjk3MjJjIiwiZXhwIjoxNjE1NDcxNTE1LCJpc3MiOiJBcHBJZGVudGl0eSIsImF1ZCI6IkFwcElkZW50aXR5VXNlciJ9.7voavZVrFCczg5WwxNT9DWeovbE0t_85hk3U1up5Jsg",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwianRpIjoiODc2ZDg0NTItYzMwMy00N2E0LThkYTAtOTY5NTVlNDA2MmJjIiwiZW1haWwiOiJqb2huLmRvZUBlbWFpbC5jb20iLCJ1aWQiOiI2MmExNGUzYy1lZGFkLTQ5YTktOWNhYy00ZjkxZWUyZGMzNzAiLCJleHAiOjE2MTU4MjY4ODAsImlzcyI6IkFwcElkZW50aXR5IiwiYXVkIjoiQXBwSWRlbnRpdHlVc2VyIn0.mnz3BFoU87WvlhZLjs4HFICrS-S8wL4D2ZV71MfcdoI",
 									"type": "string"
 								}
 							]
@@ -385,7 +407,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "https://localhost:44330/api/Item/b7229cbe-bf48-4fbd-4517-08d8e48f1a17",
+							"raw": "https://localhost:44330/api/participants/143d6828-ddae-4f58-407d-08d8e7cad614",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -393,8 +415,8 @@
 							"port": "44330",
 							"path": [
 								"api",
-								"Item",
-								"b7229cbe-bf48-4fbd-4517-08d8e48f1a17"
+								"participants",
+								"143d6828-ddae-4f58-407d-08d8e7cad614"
 							]
 						}
 					},

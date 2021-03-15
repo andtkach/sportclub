@@ -50,21 +50,27 @@ namespace Persistence
             {
                 Id = Guid.NewGuid(),
                 ParticipantEmail = "johndoe@email.com",
-                SportId = tennisGuid
+                SportId = tennisGuid,
+                Firstname = "John",
+                Surname = "Doe",
             });
 
             modelBuilder.Entity<Participant>().HasData(new Participant
             {
                 Id = Guid.NewGuid(),
                 ParticipantEmail = "johndoe@email.com",
-                SportId = squashGuid
+                SportId = squashGuid,
+                Firstname = "John",
+                Surname = "Doe",
             });
 
             modelBuilder.Entity<Participant>().HasData(new Participant
             {
                 Id = Guid.NewGuid(),
                 ParticipantEmail = "someoneelse@email.com",
-                SportId = tennisGuid
+                SportId = tennisGuid,
+                Firstname = "Someone",
+                Surname = "Else",
             });
         }
 
