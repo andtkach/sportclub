@@ -1,19 +1,19 @@
 import React, { memo } from "react";
 import PropTypes from "prop-types";
 
-import { categoriesPropType } from "../../propTypes/categories";
+import { sportsPropType } from "../../propTypes/sports";
 
 import { EditSportRow } from "./EditSportRow";
 import { ViewSportRow } from "./ViewSportRow";
 
 export const SportTable = memo(
   ({
-    categories,
-    editCategoryId,
-    onEditCategory: editCategory,
-    onDeleteCategory: deleteCategory,
-    onSaveCategory: saveCategory,
-    onCancelCategory: cancelCategory,
+    sports,
+    editSportId,
+    onEditSport: editSport,
+    onDeleteSport: deleteSport,
+    onSaveSport: saveSport,
+    onCancelSport: cancelSport,
   }) => {
     return (
       <table>
@@ -27,25 +27,25 @@ export const SportTable = memo(
           </tr>
         </thead>
         <tbody>
-          {categories.length === 0 && (
+          {sports.length === 0 && (
             <tr>
-              <td colSpan="2">There are no categories.</td>
+              <td colSpan="2">There are no sports.</td>
             </tr>
           )}
-          {categories.map((category) =>
-            category.id === editCategoryId ? (
+          {sports.map((sport) =>
+            sport.id === editSportId ? (
               <EditSportRow
-                key={category.id}
-                category={category}
-                onSaveCategory={saveCategory}
-                onCancelCategory={cancelCategory}
+                key={sport.id}
+                sport={sport}
+                onSaveSport={saveSport}
+                onCancelSport={cancelSport}
               />
             ) : (
               <ViewSportRow
-                key={category.id}
-                category={category}
-                onEditCategory={editCategory}
-                onDeleteCategory={deleteCategory}
+                key={sport.id}
+                sport={sport}
+                onEditSport={editSport}
+                onDeleteSport={deleteSport}
               />
             )
           )}
@@ -56,15 +56,15 @@ export const SportTable = memo(
 );
 
 SportTable.defaultProps = {
-  categories: [],
-  editCategoryId: "none",
+  sports: [],
+  editSportId: "none",
 };
 
 SportTable.propTypes = {
-  categories: categoriesPropType,
-  editCategoryId: PropTypes.string,
-  onEditCategory: PropTypes.func.isRequired,
-  onDeleteCategory: PropTypes.func.isRequired,
-  onSaveCategory: PropTypes.func.isRequired,
-  onCancelCategory: PropTypes.func.isRequired,
+  sports: sportsPropType,
+  editSportId: PropTypes.string,
+  onEditSport: PropTypes.func.isRequired,
+  onDeleteSport: PropTypes.func.isRequired,
+  onSaveSport: PropTypes.func.isRequired,
+  onCancelSport: PropTypes.func.isRequired,
 };

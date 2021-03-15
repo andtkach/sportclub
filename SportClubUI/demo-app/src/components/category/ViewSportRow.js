@@ -1,22 +1,22 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { categoryPropType } from "../../propTypes/categories";
+import { sportPropType } from "../../propTypes/sports";
 
 export const ViewSportRow = ({
-  category,
-  onDeleteCategory: deleteCategory,
-  onEditCategory: editCategory,
+  sport,
+  onDeleteSport: deleteSport,
+  onEditSport: editSport,
 }) => {
   return (
     <tr>
-      <td>{category.id}</td>
-      <td>{category.name}</td>
+      <td>{sport.id}</td>
+      <td>{sport.name}</td>
       <td>
-        <button type="button" onClick={() => editCategory(category.id)}>
+        <button type="button" onClick={() => editSport(sport.id)}>
           Edit
         </button>
-        <button type="button" onClick={() => deleteCategory(category.id)}>
+        <button type="button" onClick={() => deleteSport(sport.id)}>
           Delete
         </button>
       </td>
@@ -25,7 +25,7 @@ export const ViewSportRow = ({
 };
 
 ViewSportRow.propTypes = {
-  category: categoryPropType.isRequired,
-  onEditCategory: PropTypes.func.isRequired,
-  onDeleteCategory: PropTypes.func.isRequired,
+  sport: sportPropType.isRequired,
+  onEditSport: PropTypes.func.isRequired,
+  onDeleteSport: PropTypes.func.isRequired,
 };

@@ -1,29 +1,29 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { categoryPropType } from "../../propTypes/categories";
+import { sportPropType } from "../../propTypes/sports";
 import { useForm } from "../../hooks/useForm";
 import { useDefaultInputFocus } from "../../hooks/useDefaultInputFocus";
 
 export const EditSportRow = ({
-  category,
-  onSaveCategory,
-  onCancelCategory: cancelCategory,
+  sport,
+  onSaveSport,
+  onCancelSport: cancelSport,
 }) => {
-  const [sportForm, change] = useForm({ ...category });
+  const [sportForm, change] = useForm({ ...sport });
 
   const defaultInputRef = useDefaultInputFocus();
 
-  const saveCategory = () => {
-    onSaveCategory({
+  const saveSport = () => {
+    onSaveSport({
       ...sportForm,
-      id: category.id,
+      id: sport.id,
     });
   };
 
   return (
     <tr>
-      <td>{category.id}</td>
+      <td>{sport.id}</td>
       <td>
         <input
           type="text"
@@ -35,10 +35,10 @@ export const EditSportRow = ({
         />
       </td>
       <td>
-        <button type="button" onClick={saveCategory}>
+        <button type="button" onClick={saveSport}>
           Save
         </button>
-        <button type="button" onClick={cancelCategory}>
+        <button type="button" onClick={cancelSport}>
           Cancel
         </button>
       </td>
@@ -47,7 +47,7 @@ export const EditSportRow = ({
 };
 
 EditSportRow.propTypes = {
-  category: categoryPropType.isRequired,
-  onSaveCategory: PropTypes.func.isRequired,
-  onCancelCategory: PropTypes.func.isRequired,
+  sport: sportPropType.isRequired,
+  onSaveSport: PropTypes.func.isRequired,
+  onCancelSport: PropTypes.func.isRequired,
 };
