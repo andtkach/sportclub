@@ -1,16 +1,16 @@
 ﻿using System;
-using Application.Features.Categories.Commands.CreateCateogry;
-using Application.Features.Categories.Queries.GetCategoriesList;
-using Application.Features.Categories.Queries.GetCategoriesListWithItems;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Application.Features.Categories.Commands.DeleteCategory;
-using Application.Features.Categories.Commands.UpdateCategory;
-using Application.Features.Categories.Queries.GetCategoryDetail;
+using Application.Features.Sports.Commands.CreateSport;
+using Application.Features.Sports.Commands.DeleteSport;
+using Application.Features.Sports.Commands.UpdateSport;
+using Application.Features.Sports.Queries.GetSportDetail;
+using Application.Features.Sports.Queries.GetSportsList;
+using Application.Features.Sports.Queries.GetSportsListWithItems;
 using Microsoft.AspNetCore.Cors;
 
 namespace Api.Controllers

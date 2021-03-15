@@ -1,14 +1,14 @@
 ﻿using AutoMapper;
-using Application.Features.Categories.Commands.CreateCateogry;
-using Application.Features.Categories.Commands.UpdateCategory;
-using Application.Features.Categories.Queries.GetCategoriesList;
-using Application.Features.Categories.Queries.GetCategoriesListWithItems;
-using Application.Features.Categories.Queries.GetCategoryDetail;
-using Application.Features.Items.Commands.CreateItem;
-using Application.Features.Items.Commands.UpdateItem;
-using Application.Features.Items.Queries.GetIParticipanSportsList;
 using Application.Features.Items.Queries.GetItemDetail;
 using Application.Features.Items.Queries.GetItemsList;
+using Application.Features.Participants.Commands.CreateParticipant;
+using Application.Features.Participants.Commands.UpdateParticipant;
+using Application.Features.Participants.Queries.GetParticipantSportsList;
+using Application.Features.Sports.Commands.CreateSport;
+using Application.Features.Sports.Commands.UpdateSport;
+using Application.Features.Sports.Queries.GetSportDetail;
+using Application.Features.Sports.Queries.GetSportsList;
+using Application.Features.Sports.Queries.GetSportsListWithItems;
 using Domain.Entities;
 
 namespace Application.Profiles

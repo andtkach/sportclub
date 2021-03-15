@@ -55,10 +55,24 @@ namespace Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("cc525709-4843-4964-9b7f-4c36cb565fa0"),
+                            Id = new Guid("b5900a21-7fb6-4d13-81a3-54a5b8b9f301"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ParticipantEmail = "johndoe@email.com",
-                            SportId = new Guid("6766fc9f-b19a-4488-9ebc-15a1ec08d293")
+                            SportId = new Guid("e60ecff6-5b33-4b45-967c-9aa60817601c")
+                        },
+                        new
+                        {
+                            Id = new Guid("a6e42631-cd43-4a72-bf8c-6814a688b44f"),
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ParticipantEmail = "johndoe@email.com",
+                            SportId = new Guid("52650028-ce5a-4a6f-afda-ecb24653b1e9")
+                        },
+                        new
+                        {
+                            Id = new Guid("95e0db96-d2e6-442d-9aa3-8fe562f90591"),
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ParticipantEmail = "someoneelse@email.com",
+                            SportId = new Guid("e60ecff6-5b33-4b45-967c-9aa60817601c")
                         });
                 });
 
@@ -90,13 +104,13 @@ namespace Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("6766fc9f-b19a-4488-9ebc-15a1ec08d293"),
+                            Id = new Guid("e60ecff6-5b33-4b45-967c-9aa60817601c"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Tennis"
                         },
                         new
                         {
-                            Id = new Guid("15ca1813-2dd1-47c6-8ce7-48857008bd5f"),
+                            Id = new Guid("52650028-ce5a-4a6f-afda-ecb24653b1e9"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Squash"
                         });

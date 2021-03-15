@@ -7,5 +7,5 @@ GET https://localhost:44330/api/participants HTTP/1.1
 GET https://localhost:44330/api/participants/johndoe@email.com/sports HTTP/1.1
 
 ###
-GET https://localhost:44330/api/participants/cc525709-4843-4964-9b7f-4c36cb565fa0 HTTP/1.1
+GET https://localhost:44330/api/participants/b5900a21-7fb6-4d13-81a3-54a5b8b9f301 HTTP/1.1
 

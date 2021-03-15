@@ -1,7 +1,4 @@
 ﻿using Api.Utility;
-using Application.Features.Items.Commands.CreateItem;
-using Application.Features.Items.Commands.DeleteItem;
-using Application.Features.Items.Commands.UpdateItem;
 using Application.Features.Items.Queries.GetItemDetail;
 using Application.Features.Items.Queries.GetItemsList;
 using MediatR;
@@ -10,7 +7,10 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Application.Features.Items.Queries.GetIParticipanSportsList;
+using Application.Features.Participants.Commands.CreateParticipant;
+using Application.Features.Participants.Commands.DeleteParticipant;
+using Application.Features.Participants.Commands.UpdateParticipant;
+using Application.Features.Participants.Queries.GetParticipantSportsList;
 using Microsoft.AspNetCore.Authorization;
 
 namespace Api.Controllers

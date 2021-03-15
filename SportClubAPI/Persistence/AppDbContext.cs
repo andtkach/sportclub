@@ -32,6 +32,8 @@ namespace Persistence
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
 
             var tennisGuid = Guid.NewGuid();
+            var squashGuid = Guid.NewGuid();
+
             modelBuilder.Entity<Sport>().HasData(new Sport
             {
                 Id = tennisGuid,
@@ -40,7 +42,7 @@ namespace Persistence
 
             modelBuilder.Entity<Sport>().HasData(new Sport
             {
-                Id = Guid.NewGuid(),
+                Id = squashGuid,
                 Name = "Squash"
             });
 
@@ -48,6 +50,20 @@ namespace Persistence
             {
                 Id = Guid.NewGuid(),
                 ParticipantEmail = "johndoe@email.com",
+                SportId = tennisGuid
+            });
+
+            modelBuilder.Entity<Participant>().HasData(new Participant
+            {
+                Id = Guid.NewGuid(),
+                ParticipantEmail = "johndoe@email.com",
+                SportId = squashGuid
+            });
+
+            modelBuilder.Entity<Participant>().HasData(new Participant
+            {
+                Id = Guid.NewGuid(),
+                ParticipantEmail = "someoneelse@email.com",
                 SportId = tennisGuid
             });
         }
